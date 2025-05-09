@@ -84,6 +84,11 @@ INNER JOIN emprestimos_leitores ON emprestimos.id_emprestimo = emprestimos_leito
 INNER JOIN leitores ON emprestimos_leitores.id_leitor = leitores.id_leitor;
 
 -- LEFT JOIN: Mostre todos os livros com o nome do autor, mesmo os que não foram emprestados.
--- SELECT livros.titulo, autores.nome
--- FROM livros 
--- LEFT JOIN autores ON 
+SELECT livros.titulo, autores.nome_autor
+FROM livros 
+LEFT JOIN autores ON livros.id_autor = autores.id_autor;
+
+-- RIGHT JOIN: Liste todos os autores, mesmo que não tenham livros publicados.
+SELECT livros.titulo, autores.nome_autor
+FROM livros 
+RIGHT JOIN autores ON livros.id_autor = autores.id_autor;
