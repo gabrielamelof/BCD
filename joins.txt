@@ -1,0 +1,9 @@
+select *
+from pedido -> Tabela selecionada no from é a tabela da esquerda 
+left join cliente (tabela da direita (próxima tabela)) On c.id_cliente = p.id_cliente
+
+
+inner join - só traz quem tem relação 
+left join - tudo que já foi adicionado. Trazer tudo de uma tabela, mais a relação
+right join - outra/próxima tabela Trazer tudo de uma tabela, mais a relação
+full outer join - junta tudo, mantendo as relações - UNION ALL
